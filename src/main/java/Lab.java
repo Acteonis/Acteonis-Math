@@ -20,6 +20,11 @@ public class Lab {
      * @return return a^b using the pow() method of the Math class.
      */
     public double mathPow(double a, double b){
-        return 0;
+        if (b==0){return 1;}
+        else if(b%2==0){double res = mathPow(a,b/2); return res*res;}
+        else{return a*mathPow(a,b-1);}
     }
 }
+
+
+
